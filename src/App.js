@@ -1,7 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import SideBar, { HorizontalAppbar } from './components/SideBar';
 
 function App() {
+  return (
+    <div className='flex bg-custom-clr-400'>
+      <SideBar />
+      <HorizontalAppbar />
+    </div>
+  );
+}
+
+const LegacyDiy = () => {
   return (
     <div className="bg-blue-450 text-primary text-4xl">
       <h1>Heading Text!!</h1>
@@ -14,7 +24,7 @@ function App() {
         Hoi Hoi!!
       </TailwindCssButtonReusable>
     </div>
-  );
+  )
 }
 
 const TailwindCssButtonReusable = (props) => {

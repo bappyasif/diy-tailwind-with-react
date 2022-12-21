@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  body {
+    background-color: darkolivegreen;
+  }
+
+  .sidebar-icon {
+    @apply relative flex items-center justify-center
+           h-12 w-12 mt-2 mb-2 mx-auto
+           bg-gray-800 text-green-600
+           hover:bg-green-900 hover:text-white
+           rounded-3xl hover:rounded-xl
+           transition-all duration-300 ease-linear
+           cursor-pointer;
+  }
+
+  .sidebar-tooltip {
+    /* hover doesnt work with tooltips kind of element where its invisible or doesnt exist on DOM to begin with
+     we need to do this from component JSX instead using group in parent and then using hover on child elements and scale it upto 100 */
+    /* scale-0 means hide it */
+    @apply absolute w-auto p-2 m-2 min-w-max left-14
+           rounded-md shadow-md
+           text-white bg-gray-900
+           text-xs font-bold
+           transition-all duration-200 scale-0 origin-left
+  }
+
+  .appbar-horizontal {
+    @apply relative flex items-center justify-center
+           /* h-8 w-20 my-4 mx-6  */
+           p-2 mb-2 rounded-2xl
+           text-secondary bg-blue-800
+           hover:text-white hover:bg-blue-450 hover:rounded-md
+           transition-all duration-300 ease-out
+           cursor-context-menu
+  }
+
+  .appbar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max top-14
+           rounded-lg shadow-lg
+           bg-secondary text-teal-400
+           text-lg font-bold
+           transition-all duration-200 scale-0 origin-top
+  }
+}

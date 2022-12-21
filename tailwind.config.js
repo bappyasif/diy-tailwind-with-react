@@ -1,5 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
+  // mode: "jit",
+  // purge: [],
+  // darkMode: false,
+  // it will look for any parent elements for a dark class and when its present its children will get dark variant
+  darkMode: 'class',
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -16,7 +23,20 @@ module.exports = {
     },
     extend: {
       colors: {
-        "primary": "#ff4800",
+        // "primary": "#ff4800",
+        "primary": "#202225",
+        "secondary": "#5865f2",
+        "custom-clr": colors.trueGray,
+        gray: {
+          900: '#202225',
+          800: '#2f3136',
+          700: '#36393f',
+          600: '#4f545c',
+          400: '#d4d7dc',
+          300: '#e3e5e8',
+          200: '#ebedef',
+          100: '#f2f3f5',
+        },
         "blue": {
           450: "#5f99f7"
         }
