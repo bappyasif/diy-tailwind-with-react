@@ -1,12 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import SideBar, { HorizontalAppbar } from './components/SideBar';
+import Form from './components/Form';
+import ExampleMenu from './components/Menu';
+import ExampleModal from './components/Modal';
+import ExampleProducts from './components/Card';
 
 function App() {
   return (
     <div className='flex bg-custom-clr-400'>
-      <SideBar />
+      {/* <SideBar />
       <HorizontalAppbar />
+      <Form /> */}
+      <ExampleMenu />
+      <ExampleModal />
+      <ExampleProducts />
     </div>
   );
 }

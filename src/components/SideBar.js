@@ -44,7 +44,8 @@ export const HorizontalAppbar = () => {
 
 const AppbarHorizontal = ({ icon, text = "Tooltips" }) => {
     return (
-        <div className='appbar-horizontal group'>
+        <div className='appbar-horizontal group 
+                      active:bg-red-800'>
             <p className='flex justify-center max-w-fit items-center'>
                 {icon}
                 <span className='font-extrabold text-2xl ml-2 mr-1'>
